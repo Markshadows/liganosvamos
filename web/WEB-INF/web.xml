@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ServletUsuario</servlet-name>
+        <servlet-class>controlador.ServletUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletSuperUsuario</servlet-name>
+        <servlet-class>controlador.ServletSuperUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <servlet-class>controlador.ServletAdministrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>controlador.SessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUsuario</servlet-name>
+        <url-pattern>/procesoUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletSuperUsuario</servlet-name>
+        <url-pattern>/procesoSuperUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <url-pattern>/procesoAdministrador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/procesoSession</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
